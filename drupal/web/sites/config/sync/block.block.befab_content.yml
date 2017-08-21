@@ -1,0 +1,22 @@
+uuid: 7cdd9913-2814-444b-88cd-fb45342290b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - befab
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: befab_content
+theme: befab
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

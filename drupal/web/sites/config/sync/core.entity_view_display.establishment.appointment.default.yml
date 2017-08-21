@@ -1,0 +1,57 @@
+uuid: d30ccd8e-f5fb-4ec2-8249-a97a21aeeb50
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.appointment
+    - field.field.establishment.appointment.field_customer
+    - field.field.establishment.appointment.field_date
+    - field.field.establishment.appointment.field_establishment
+  module:
+    - datetime
+    - user
+id: establishment.appointment.default
+targetEntityType: establishment
+bundle: appointment
+mode: default
+content:
+  field_customer:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_establishment:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

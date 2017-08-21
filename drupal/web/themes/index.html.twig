@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html><html data-ng-app="doc" id="ng-app" lang="fr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head data-country="fr" data-env="production"><meta charset="utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0531e5f106","applicationID":"22887157","transactionName":"cldbQ0QJDwkBREwRTVBMXFRpFgICAUVMClZcXUVWUQM=","queueTime":1,"applicationTime":39,"agent":""}</script>
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwIGVFNVGwECXFlVBgQA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(19),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,s.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,s.now()])}var i=t("handle"),a=t(20),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(p){"stack"in p&&(t(12),t(11),"addEventListener"in window&&t(6),s.xhrWrappable&&t(13),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){C++,M=y.hash,this[u]=b.now()}function o(){C--,y.hash!==M&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(9),x=t(10),E=t(8),O=t(6),R=t(12),P=t(7),T=t(13),S=t("ee"),N=S.get("tracer");t(14),b.features.spa=!0;var M,j=w[v],C=0;S.on(u,r),S.on(p,r),S.on(d,o),S.on(h,o),S.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),R.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),P.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),a(T,"send-xhr"+c),a(S,"xhr-resolved"),a(S,"xhr-done"),a(P,m+c),a(P,m+"-done"),E.on("pushState-end",i),E.on("replaceState-end",i),j("hashchange",i,!0),j("load",i,!0),j("popstate",function(){i(0,C>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(12),c=t(11),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(22)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(19);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(22)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("mutation"),o=t(22)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],10:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(22),a=t("ee").get("promise"),c=i(a),s=t(19),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],11:[function(t,e,n){var r=t("ee").get("raf"),o=t(22)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],12:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(22)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],13:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(22)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new l(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],14:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(15),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(18),l=t(17),m=window.XMLHttpRequest;a.features.xhr=!0,t(13),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],15:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("index.html")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],16:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(19),c=t(20),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],17:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],18:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],19:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],20:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],21:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],22:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(20),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(19),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(19),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1044.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(16),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(21)},{}]},{},["loader",2,14,5,3,4]);</script><meta content="origin-when-cross-origin" name="referrer" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="Trouvez rapidement un spécialiste près de chez vous et prenez rendez-vous gratuitement en ligne en quelques clics" name="description" /><meta content="app-id=fr.Befab.www" name="google-play-app" /><meta content="app-id=id925339063" name="apple-itunes-app-custom" /><script>window.platforms = {
+  cordova: false,
+  android: false,
+  ios: false
+};</script>
+
+<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Montserrat:400,500,700" />
+<link href="icon_patient/180x180.png" rel="apple-touch-icon" /><title>Befab : Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien</title>
+<link href="open_search.xml" rel="search" type="application/opensearchdescription+xml" />
+
+<link href="../maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" media="all" href="assets/patient/bundle-website-common-39c3b230d7b4f349b0d8f271b16dc594ed1c8f0888e455c8889315872600ded7.css" />
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP3Q9S5');</script>
+
+<meta property="og:title" content="Befab : Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien " /><meta property="og:type" content="website" />
+
+
+<meta property="og:site_name" content="Befab" />
+
+<meta property="og:locale" content="fr_FR" />
+
+<meta property="og:description" content="Trouvez rapidement un spécialiste près de chez vous et prenez rendez-vous gratuitement en ligne en quelques clics" />
+
+</head>
+
+
+<body class="static_pages homepage">
+
+<div class="navbar-new">
+<a class="logo" href="index.html"></a>
+<div class="button-menu mobile">
+<span></span><span></span><span></span>
+</div>
+<div class="mobile-overlay-menu"></div>
+<div class="navbar-new-right">
+<div class="b2b-cta"><a class="b2b-cta-btn" href="#">Vous êtes un Coiffeur ?</a></div>
+<a class="help" href="#">
+<span class="icon">?</span>
+<span class="text">Besoin d&#39;aide ?</span></a>
+<a class="account login-form-toggle"><span class="icon front-icon-user"></span>
+<span class="name"><strong>Mon compte</strong><br />Gérer mes RDV</span></a>
+</div><div class="mobile-nav-right"><div class="button-search front-icon-search" id="bt-search"></div><a class="a mobile button-account front-icon-user" href="#"></a></div><div class="mobile-menu left dl-menu-dark"><div class="dl-menu-section"><ul class="dl-menu-group dl-menu-group-dividers"><li class="dl-menu-item"><a target="_blank" href="#">Vous êtes Coiffeur  ?</a></li><li class="dl-menu-item"><a href="#">Le concept</a></li><li class="dl-menu-item"><a href="#">À propos de nous</a></li><li class="dl-menu-item"><a href="#">Nos Investisseurs</a></li><li class="dl-menu-item"><a href="#">Recrutement</a></li><li class="dl-menu-item"><a href="sponsorship/new.html">Parrainage</a></li><li class="dl-menu-item"><a href="#">Confidentialité</a></li><li class="dl-menu-item"><a href="#">Presse</a></li><li class="dl-menu-item"><a href="#">Besoin d&#39;aide ?</a></li><li class="dl-menu-item"><a href="#">Questions fréquentes</a></li></ul></div></div></div><div class="login-form-popin" style="display: none"><div class="arrow-popin-new"></div><strong class="title">Bienvenue à nouveau sur Befab.</strong><strong class="subtitle">Merci de vous identifier.</strong><form class="login-form" action="https://www.Befab.fr/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="kind" id="kind" value="patient" /><input type="hidden" name="return_to" id="return_to" /><div class="form-block block-padding block-sign-in"><div class="form-group"><input autocomplete="email" class="form-control" name="username" placeholder="Adresse email" required="" type="email" /></div><div class="form-group"><input autocomplete="current-password" class="form-control" name="password" placeholder="Mot de passe" required="" type="password" /><a class="forgotten-password-link" rel="nofollow" target="_blank" href="#">Mot de passe oublié ?</a></div><div class="form-group txt-left txt-small"><label class="form-label checkbox-inline"><input checked="checked" name="remember" type="checkbox" />Se souvenir de moi sur cet appareil</label></div><div class="form-group"><input type="hidden" name="redirection" id="redirection" /><input type="submit" name="commit" value="S&#39;identifier" class="dl-button-block dl-button-info dl-button" data-disable-with="Identification…" /></div></div></form><strong><hr /><span>Vous êtes un Coiffeur  ?</span> <a href="#">Identifiez-vous</a></strong></div><link rel="stylesheet" media="all" href="assets/patient/bundle-website-homepage-b93823fba7e6bac767f609392efdee34e970a896499a233354f120a2108340d8.css" /><div class="home-fr"><section class="cover-wrapper homepage-search"><div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div><div class="search-zone row-center"><h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4><div id="doctor_search_bar" data-props="{&quot;queryInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;speciality&quot;:null},&quot;placeInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;place_id&quot;:null}}"><form class="searchbar ng-pristine ng-valid" data-reactroot=""><div class="searchbar-query"><div><div class="searchbar-input-wrapper"><svg class="searchbar-input-icon" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.6 16.92c.48.6.53 1.12.14 1.58l-1.2 1.2c-.58.48-1.16.48-1.72 0l-4.8-4.86a7.6 7.6 0 0 1-3.96 1.1c-2.17 0-4.05-.82-5.64-2.44C.82 11.92 0 10.04 0 7.86c0-2.1.76-3.95 2.27-5.54C3.83.78 5.67 0 7.82 0 10 0 11.9.8 13.5 2.42c1.62 1.62 2.43 3.5 2.43 5.64 0 1.52-.4 2.9-1.2 4.1l4.86 4.76zM2.36 7.86c0 1.5.58 2.8 1.74 3.96 1.16 1.16 2.48 1.73 3.96 1.73s2.76-.54 3.8-1.63c1.1-1.05 1.64-2.34 1.64-3.86 0-1.45-.57-2.75-1.73-3.9C10.62 3 9.3 2.4 7.82 2.4c-1.52 0-2.8.55-3.8 1.64-1.1 1.02-1.65 2.3-1.65 3.8z"></path></svg><input class="searchbar-input searchbar-query-input" placeholder="Coiffeur, Salon de coiffure, Esthéticien ..." /></div></div></div><div class="searchbar-place-submit"><div class="searchbar-place"><div class="searchbar-place-input-wrapper"><div class="searchbar-input-wrapper searchbar-input-hide-overflowing-around-me"><svg class="searchbar-input-icon" height="20" viewbox="0 0 16 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M16 7.5c0-1-.2-2-.7-3-.3-.8-1-1.6-1.7-2.3C12.8 1.5 12 1 11 .6 10 .2 9 0 8 0S6 .2 5 .6c-1 .4-2 1-2.7 1.6C1.6 3 1 3.7.7 4.6c-.5 1-.7 2-.7 3 0 .8.2 1.8.7 2.8 0 .4.4 1 .8 1.4l5.2 7.5c.4.5.8.7 1.3.7s1-.2 1.3-.7l5.2-7.5c.4-.5.7-1 .8-1.4.5-1 .7-2 .7-3zm-6 2c-.5.5-1.2.8-2 .8s-1.5-.3-2-1c-.7-.4-1-1-1-1.8s.3-1.4 1-2c.5-.5 1.2-.8 2-.8s1.5.3 2 .8c.7.6 1 1.2 1 2 0 .7-.3 1.4-1 2z"></path></svg><input class="searchbar-input searchbar-place-input" placeholder="Où ?" /><button class="Tappable-inactive searchbar-place-around-me-button dl-button dl-button-size-normal" role="button" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" type="button"><svg class="searchbar-place-around-me-icon" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10.8 19.5c-.15.33-.42.5-.8.5-.05 0-.12 0-.2-.03-.22-.05-.4-.16-.52-.32-.13-.17-.2-.35-.2-.56v-8.2H.92c-.2 0-.4-.08-.55-.2-.17-.13-.27-.3-.32-.5-.07-.2-.05-.4.05-.6.07-.2.2-.35.4-.44L18.68.1c.12-.07.26-.1.4-.1.26 0 .48.1.65.27.14.13.23.3.26.5 0 .18 0 .37-.1.55L10.8 19.5z"></path></svg><span class="searchbar-place-around-me-label">Autour de moi</span><i class="icon-dm-delete-form searchbar-place-around-me-clear"></i></button></div></div></div><button class="Tappable-inactive dl-button-primary searchbar-submit-button dl-button dl-button-size-normal" role="button" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" type="submit"><span class="dl-button-label"><span class="searchbar-submit-button-label">Rechercher</span><svg class="searchbar-submit-button-arrow" height="16" viewbox="0 0 10 16" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M2.7.5c-.2-.3-.5-.5-1-.5S1 .2.5.5C-.2 1-.2 2 .5 2.7L5.7 8 .5 13.5c-.7.8-.7 1.5 0 2.2.3.3.7.4 1.2.4.4 0 .8 0 1-.3L9 9c.3-.2.4-.5.4-1 0-.4 0-.8-.4-1L2.7.5z"></path></svg></span></button></div></form></div></div></section><section class="homepage-b2b-features"><div class="row-padding-1 row-center"><h3 class="homepage-b2b-features-title">Vous êtes Coiffeur  ? <br /> Découvrez la prise de rendez-vous en ligne !</h3><div class="b2b-features"><div class="b2b-section-content"><div class="b2b-features-list"><a class="b2b-features-item b2b-features-item-size-normal" data-analytics-event-category="b2b" data-analytics-event-label="valueSaveTime" href="#"><div class="b2b-features-item-icon b2b-features-item-icon-phone"><svg
+  version="1.1"
+  id="phone-icon"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 115 115"
+>
+  <style type="text/css">
+    .phone-icon-body {
+      fill: #fff;
+    }
+
+    .phone-icon-speaker-small {
+      fill: #fff;
+    }
+
+    .phone-icon-speaker-large {
+      fill: #cAd1d8;
+    }
+
+    .phone-icon-reflect {
+      opacity: 0.2;
+      fill: #eaeaea;
+    }
+
+    .phone-icon-touch {
+      fill: #CAD1D8;
+    }
+
+    .phone-icon-screen {
+      opacity: 0.3;
+      fill: #CAD1D8;
+    }
+
+    .phone-icon-eye {
+      fill: #ABB8C4;
+      transform-origin: center;
+      transform: rotate(0);
+      will-change: transform;
+    }
+
+    .phone-icon-mouth {
+      fill: #ABB8C4;
+    }
+
+    .phone-icon-phone {
+      transform-origin: center 80%;
+      transform: rotate(0);
+      will-change: transform;
+    }
+  </style>
+  <g class="phone-icon-phone">
+    <path class="phone-icon-body" d="M75.2,134.3c0,3.9-1,6.8-5.7,6.8H42.4c-3.8,0-5.5-2.9-5.5-6.3V37.2c0-2.3,0.5-3.5,4.5-3.5h30.3
+  		c2.3,0,3.5-0.1,3.5,3.2V134.3z"/>
+    <circle class="phone-icon-speaker-large" cx="57.5" cy="45.9" r="6.1"/>
+    <circle class="phone-icon-speaker-small" cx="57.5" cy="45.9" r="1.1"/>
+    <path class="phone-icon-reflect" d="M71.4,33.7l-29,107.4h27.2c4.7,0,5.7-2.9,5.7-6.8V36.9C75.2,33.5,73.7,33.7,71.4,33.7z"/>
+    <circle class="phone-icon-touch" cx="47.5" cy="100.4" r="2.4"/>
+    <circle class="phone-icon-touch" cx="57.3" cy="100.4" r="2.4"/>
+    <circle class="phone-icon-touch" cx="67.1" cy="100.4" r="2.4"/>
+    <circle class="phone-icon-touch" cx="47.5" cy="109.6" r="2.4"/>
+    <circle class="phone-icon-touch" cx="57.3" cy="109.6" r="2.4"/>
+    <circle class="phone-icon-touch" cx="67.1" cy="109.6" r="2.4"/>
+    <path class="phone-icon-screen" d="M70.9,71.4c0,3.2-2.6,5.8-5.8,5.8H47.7c-3.2,0-5.8-2.6-5.8-5.8v-6.3c0-3.2,2.6-5.8,5.8-5.8h17.4
+			c3.2,0,5.8,2.6,5.8,5.8V71.4z"/>
+    <path id="phone-icon-left-eye" class="phone-icon-eye" d="M50.5,74.6c0,0.5-0.3,0.9-0.9,0.9l0,0c-0.5,0-0.9-0.3-0.9-0.9v-2.6c0-0.5,0.3-0.9,0.9-0.9l0,0
+			c0.5,0,0.9,0.3,0.9,0.9V74.6z"/>
+    <path id="phone-icon-right-eye" class="phone-icon-eye" d="M63.3,74.6c0,0.5-0.3,0.9-0.9,0.9l0,0c-0.5,0-0.9-0.3-0.9-0.9v-2.6c0-0.5,0.3-0.9,0.9-0.9l0,0
+			c0.5,0,0.9,0.3,0.9,0.9V74.6z"/>
+    <path class="phone-icon-mouth" d="M46.1,84.8c5.4,5.9,16.5,6.6,21.6-0.1c0.7-0.9-0.9-1.7-1.4-0.9c-4.3,5.9-14.3,4.8-18.8-0.3
+      C46.5,82.7,45.4,84,46.1,84.8L46.1,84.8z"/>
+  </g>
+</svg>
+</div><h3 class="b2b-features-item-title">Gagnez 30% de temps de secrétariat</h3></a><a class="b2b-features-item b2b-features-item-size-normal" data-analytics-event-category="b2b" data-analytics-event-label="valueReduceNonAttendance" href="#"><div class="b2b-features-item-icon b2b-features-item-icon-message"><svg
+  version="1.1"
+  id="message-icon"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 115 115"
+>
+  <style type="text/css">
+    .message-icon-envelope-bg {
+      fill: #fff;
+    }
+
+    .message-icon-envelope-content {
+      fill: #e2dfdc;
+      opacity: 0.5;
+    }
+
+    .message-icon-envelope-top {
+      fill: #fff;
+    }
+
+    .message-icon-bubble {
+      will-change: transform;
+      transform: scale(1);
+      transform-origin: center;
+    }
+
+    .message-icon-bubble-bg {
+      fill: #ec6465;
+    }
+
+    .message-icon-bubble-text {
+      fill: #fff;
+    }
+  </style>
+  <path class="message-icon-envelope-bg" d="M56.6,61.6L56.6,61.6L56.6,61.6l0.3-0.1L30.1,40.8v32c0,1.9,0.9,2.5,2.2,2.5h50.4c1.2,0,2.2-0.9,2.3-2.1V40.6
+		l-27.9,21H56.6z"/>
+  <path class="message-icon-envelope-content" d="M57.7,63.6L33.5,46v23.4c0,0.8,0,2.4,2,2.4h44.8c0.6,0.1,1.2-0.3,1.3-0.9c0-0.1,0-0.1,0-0.2V45.8L57.7,63.6"/>
+  <polygon class="message-icon-envelope-top" points="30.4,40.3 30.5,43.5 58.1,64.1 84.9,43.1 84.9,40.3"/>
+  <g class="message-icon-bubble">
+    <circle class="message-icon-bubble-bg" cx="84.6" cy="40.7" r="15.4"/>
+    <path class="message-icon-bubble-text" d="M87.3,48.5h-2.9V37.3l-3.6,1.9v-2.7l4.7-2.7h1.9V48.5z"/>
+  </g>
+</svg>
+</div><h3 class="b2b-features-item-title">Réduisez de 75% vos rendez‑vous non honorés</h3></a><a class="b2b-features-item b2b-features-item-size-normal" data-analytics-event-category="b2b" data-analytics-event-label="valueNewPatients" href="#"><div class="b2b-features-item-icon b2b-features-item-icon-map"><svg
+  version="1.1"
+  id="map-icon"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 115 115"
+>
+  <style type="text/css">
+    .map-icon-marker-bg {
+      fill: #fff;
+    }
+
+    .map-icon-marker-gradient {
+      opacity:0.6;
+      fill: url(#map-icon-pink-gradient);
+    }
+
+    .map-icon-path {
+      fill: none;
+      stroke: #B21835;
+      stroke-width: 3;
+      stroke-dasharray: 7;
+    }
+
+    .map-icon-marker {
+      will-change: transform;
+      transform: translateY(0);
+      transform-origin: center;
+    }
+
+    .map-icon-marker-shadow{
+      fill: #D83D50;
+      transform-origin: center;
+      transform: scale(1);
+      will-change: transform;
+    }
+  </style>
+  <linearGradient id="map-icon-pink-gradient" gradientUnits="userSpaceOnUse" x1="46.6248" y1="31.2882" x2="46.6248" y2="94.1922" gradientTransform="matrix(1 0 0 -1 0 116)">
+    <stop offset="0" style="stop-color:#FF00FF;stop-opacity:0.5"/>
+    <stop offset="0.9958" style="stop-color:#FFFFFF;stop-opacity:0"/>
+  </linearGradient>
+  <path class="map-icon-path" d="m4.87499,98.12138c41.44271,-23.06159 52.62411,19.85419 103.70259,-4.92506" />
+  <g class="map-icon-marker">
+    <path class="map-icon-marker-bg" d="M57,20c-10.7,0-19.5,8.7-19.5,19.5C37.5,57.7,54.9,77,57,77c2.4,0,19.5-20.4,19.5-37.6
+			C76.5,28.7,67.8,20,57,20z M57.3,46.5c-4.6,0-8.3-3.7-8.3-8.3s3.7-8.3,8.3-8.3s8.3,3.7,8.3,8.3S61.9,46.5,57.3,46.5z"/>
+    <path class="map-icon-marker-gradient" d="M57.6,29.9l0.1-9.8c0,0-0.2,0-0.4,0c-10.8,0-19.6,8.1-19.8,19.6C37.4,57.6,54.9,77,57,77c0.1,0,0.3,0,0.3-0.1
+  		l0.2-30.3c0,0-0.2,0-0.3,0c-4.6,0-8.3-3.8-8.3-8.3S52.3,29.9,57.6,29.9z"/>
+  </g>
+  <ellipse class="map-icon-marker-shadow" cx="57.2" cy="84.1" rx="8.5" ry="2.4"/>
+</svg>
+</div><h3 class="b2b-features-item-title">Renouvelez votre patientèle selon vos besoins</h3></a><a class="b2b-features-item b2b-features-item-size-normal" data-analytics-event-category="b2b" data-analytics-event-label="valueNewService" href="#"><div class="b2b-features-item-icon b2b-features-item-icon-star"><svg
+  version="1.1"
+  id="star-icon"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+	viewBox="0 0 115 115"
+>
+  <style type="text/css">
+    .star-icon-star-dot {
+      fill: #FFFFFF;
+      stroke: #F4F4D7;
+      stroke-width: 0.25;
+      stroke-miterlimit: 10;
+    }
+
+    .star-icon-star-dot {
+      opacity: 0.3;
+      transform-origin: center;
+      transform: scale(1);
+      will-change: transform, opacity;
+    }
+
+    .star-icon-circle-star {
+      fill: #03BBDF;
+      opacity: 1;
+      transform-origin: center;
+      transform: scale(1);
+      will-change: transform, opacity;
+    }
+
+  	.star-icon-star {
+      fill: #FFE59C;
+      transform-origin: center;
+      transform: scale(1);
+      will-change: transform;
+    }
+  </style>
+  <ellipse class="star-icon-star-dot" cx="89.5" cy="6" rx="0.8" ry="0.7"/>
+  <ellipse class="star-icon-star-dot" cx="76.9" cy="30.9" rx="0.6" ry="0.5"/>
+  <ellipse class="star-icon-star-dot" cx="75.7" cy="15.5" rx="1" ry="0.9"/>
+  <ellipse class="star-icon-star-dot" cx="105.8" cy="88.1" rx="1" ry="0.9"/>
+  <ellipse class="star-icon-star-dot" cx="81.9" cy="102.4" rx="0.6" ry="0.6"/>
+  <ellipse class="star-icon-star-dot" cx="98.2" cy="54.7" rx="1.2" ry="1.1"/>
+  <ellipse class="star-icon-star-dot" cx="23.2" cy="80" rx="0.7" ry="0.7"/>
+  <ellipse class="star-icon-star-dot" cx="23.9" cy="25.9" rx="0.9" ry="0.9"/>
+  <ellipse class="star-icon-star-dot" cx="53.4" cy="101.2" rx="1.1" ry="1.1"/>
+  <circle class="star-icon-circle-star" cx="57.5" cy="57.5" r="10" />
+  <polygon class="star-icon-star" points="89,51 68.8,45 57.2,24.9 45.6,45 26,49.1 40.1,64.2 37,84 57.3,75.2 76.1,84 74.5,64.3"/>
+</svg>
+</div><h3 class="b2b-features-item-title">Apportez un service nouveau pour vos clients</h3></a></div></div></div><a class="dl-button-primary dl-button dl-button-size-normal homepage-b2b-features-cta" href="#"><span class="dl-button-label">En savoir plus</span></a></div></section><section class="b2b-notoriety"><div class="b2b-notoriety-kpis"><div class="b2b-notoriety-item"><div class="b2b-notoriety-value">23 000</div><div class="b2b-notoriety-label">Coiffeurs</div></div><div class="b2b-notoriety-item"><div class="b2b-notoriety-value">650</div><div class="b2b-notoriety-label">Salon de coiffure</div></div><div class="b2b-notoriety-item"><div class="b2b-notoriety-value">8,5 millions</div><div class="b2b-notoriety-label">de visites par mois</div></div></div></section><section class="homepage-press">
+	
+</section><section class="row-center row-padding-1"><div class="homepage-jobs"><p>Befab recrute <strong>150 collaborateurs</strong></p><a class="dl-button-primary dl-button dl-button-size-normal" href="#"><span class="dl-button-label">Rejoignez nous</span></a></div></section><section class="homepage-social row-padding-1 row-center"><div class="homepage-social-block col-6 col-padding"><div class="icon facebook front-icon-facebook"></div><a class="text" href="https://www.facebook.com/Befab" target="_blank"><span>Suivez-nous sur Facebook</span><span>11606 likes</span></a></div><div class="homepage-social-block col-6 col-padding"><div class="icon twitter front-icon-twitter"></div><a class="text" href="https://twitter.com/Befab" target="_blank"><span>Suivez-nous sur Twitter</span><span>3778 followers</span></a></div></section></div>
+
+<div class="container-full dark support_help help-b2c"><div class="container text-center"><h3>Une question ? Besoin d&#39;aide ?</h3><a class="help" href="#">Consultez notre aide en ligne ou contactez-nous</a></div></div>
+
+<footer>
+
+<div class="row-center row-padding">
+<div class="container-links">
+<div class="col-3">
+<h4>À propos de Befab</h4>
+<ul>
+<li><a target="_blank" href="#">Vous êtes Coiffeur  ?</a></li>
+<li><a href="#">Le concept</a></li>
+<li><a href="#">À propos de nous</a></li>
+<li><a href="#">Nos Investisseurs</a></li>
+<li><a href="#">Recrutement</a></li>
+<li><a href="#">Parrainage</a></li>
+<li><a href="#">Confidentialité</a></li>
+<li><a href="#">Presse</a></li>
+<li><a href="#">Besoin d&#39;aide ?</a></li>
+<li><a href="#">Questions fréquentes</a></li>
+</ul>
+</div>
+<div class="col-5">
+<h4>Trouvez votre salon de coiffure</h4>
+<ul>
+<li><a href="#">Toutes les spécialités</a></li>
+<li><a href="#">Toutes les expertises</a></li>
+
+</ul>
+</div>
+<div class="col-3">
+<h4>Recherches fréquentes</h4>
+<ul>
+<li><a href="#">Coiffeurs</a></li>
+<li><a href="#">Coiffeurs</a></li>
+<li><a href="#">Coiffeurs</a></li>
+<li><a href="#">Coiffeurs</a></li>
+<li><a href="#">Coiffeurs</a></li>
+</ul>
+</div>
+</div>
+<br />
+
+
+<div class="social-network-links"><a class="front-icon-facebook" title="Suivez-nous sur Facebook" data-external="true" href="https://www.facebook.com/Befab"><span></span></a><a class="front-icon-twitter" title="Suivez-nous sur Twitter" data-external="true" href="https://twitter.com/Befab"><span></span></a><a class="front-icon-linkedin" title="Suivez-nous sur LinkedIn" data-external="true" href="https://www.linkedin.com/company/Befab"><span></span></a><a class="front-icon-gplus" title="Suivez-nous sur Google Plus" data-external="true" href="#"><span></span></a></div>
+
+</div></footer><script>window.country = "fr";
+window.locale = "fr";
+window.isPartnersDomain = false;
+window.translation_keys = {"root":{"common":{"upload":{"progress":"Début du transfert du fichier, ne quittez pas cette page."},"success":"Succès.","validate":"Valider","print":"Imprimer","from_to_time":"%{from} à %{to}","brand":{"book_online":"Prendre rendez-vous en ligne"},"error":"Désolé, une erreur est survenue.","office_with_elevator":"Cabinet au %{floor} avec ascenseur","office_without_elevator":"Cabinet au %{floor} sans ascenseur","secretary":"Secrétariat","numberformat":{"million_short":{"one":"1 m","other":"%{count} m"},"million_long":{"one":"1 million","other":"%{count} millions"}},"dateformat":{"day":{"one":"1 jour","other":"%{count} jours"},"hour":{"one":"1 heure","other":"%{count} heures"},"minute":{"one":"1 minute","other":"%{count} minutes"},"short":{"day":"%{count}j","hour":"%{count}h","minute":"%{count}min"},"weekdays":{"day_0":"dimanche","day_1":"lundi","day_2":"mardi","day_3":"mercredi","day_4":"jeudi","day_5":"vendredi","day_6":"samedi"}},"man":"Homme","woman":"Femme","warning":"Attention","enable":"Activer","disable":"Désactiver","search":"Rechercher","changes_saved":"Vos modifications ont bien été enregistrées.","or":"ou","patient":"Patient","status":"Statut","statuses":"Statuts","day":"Jour","month":"Mois","year":"Année","tagline":"Rendez-vous par Internet sous 24h","practitionners":"Coiffeurs","practitioner":"Praticien","yes":"Oui","no":"Non","gender":"Civilité","last_name":"Nom","last_name_full":"Nom de famille","maiden_name":"Nom de naissance","first_name":"Prénom","phone_number":"Téléphone","mobile_phone_number":"Téléphone portable","secondary_phone_number":"Téléphone fixe","email":"Email","birthdate":"Date de naissance","address":"Adresse","zipcode":"Code postal","city":"Ville","digicode":"Digicode","tags":"Tags","and":"et","all":"Tous","none":"Aucun","select_all":"Tout sélectionner","unselect_all":"Tout désélectionner","boolean":{"false":"non","true":"oui"},"patient_female":"Patiente","actions":{"add":"Ajouter","save":"Enregistrer","cancel":"Annuler","delete":"Supprimer","edit":"Modifier","send":"Envoyer","keep":"Conserver","confirm":"Confirmer","continue":"Continuer","back":"Retour","reset":"Réinitialiser","fill":"Remplir","know_more":"En savoir plus"},"states":{"saving":"Enregistrement...","adding":"Ajout...","deleting":"Suppression..."},"civility":{"mister":"M.","madam":"Mme","label":"Civilité"},"title":{"m":"M.","f":"Mme","n":"Mme/M."},"long_title":{"m":"Monsieur","f":"Madame","n":"Madame/Monsieur"},"age":{"months":{"one":"1 mois","other":"%{count} mois"},"years":{"one":"1 an","other":"%{count} ans"}},"greetings":"Bonjour","hello":"Bonjour,","regards":"Très cordialement,","today":"aujourd'hui","tomorrow":"demain","more_info":"Plus d'infos :","Befab_team":"L'équipe Befab","third_party_payer":"Tiers payant","mobile_phone":"Téléphone portable","mail":"Adresse email","mail_confirm":"Confirmez votre adresse mail","password":"Mot de passe","loading":"Chargement...","choose_a_file":"Choisir un fichier","appointment":"Rendez-vous","offline_notice":"Vous n'êtes pas connecté à internet","empty":"Vide","substitution":"%{substitute_status} du %{doctor_name}","substitution_no_title":"%{substitute_status} de %{doctor_name}","languages":{"alsatia":"Alsacien","am":"Arménien","bg":"Bulgare","catalonia":"Catalan","cn":"Chinois","co":"Corse","cz":"Tchèque","de":"Allemand","dk":"Danois","dz":"Kabyle","es":"Espagnol","fa":"Persan","fr":"Français","gb":"Anglais","gr":"Grec","gu":"Gujarati","hu":"Hongrois","il":"Hébreu","ir":"Iranien","it":"Italien","jp":"Japonais","kh":"Cambodgien","kr":"Coréen","ku":"Kurde","la":"Laotien","lb":"Arabe","lv":"Lituanien","ma":"Berbère","nl":"Néerlandais","false":"Norvégien","pl":"Polonais","pt":"Portugais","ro":"Roumain","rs":"Serbe","ru":"Russe","se":"Suédois","sgn":"Langue des signes","sk":"Slovaque","th":"Thaï","tr":"Turc","ua":"Ukrainien","vn":"Vietnamien"},"format_interval_year":{"since":"depuis %{startYear}","until":"jusqu'à %{endYear}"},"doctor":{"legal_statuses":{"employee_in_hospital":"Salarié (en hôpital)","employee_not_in_hospital":"Salarié (hors hôpital)","professional":"Libéral","unknown":"-"}},"sample_male_first_name":"Jean","sample_last_name":"Dupont","password_input":{"password_too_small":"Votre mot de passe doit comporter au moins %{minLength} caractères.","weak":"Niveau de sécurité : Faible","medium":"Niveau de sécurité : Moyen","strong":"Niveau de sécurité : Fort","very_strong":"Niveau de sécurité : Très fort"},"book_online":"Pour information : lors de votre prochaine consultation, vous pouvez prendre rendez-vous via Internet sur %{link}.\n","fields":{"required":"Ce champ est obligatoire."},"floor":{"zero":"Rez-de-chaussée","one":"%{floor} étage","other":"%{floor} étage"},"basement_floor":"%{floor} sous-sol","deletion":"suppression","addition":"ajout","availabilities":{"no_availabilities":"Aucune disponibilité en ligne","booking_disabled_html":"Pour prendre rendez-vous, appelez le :<br>\n<a href=\"tel://%{landline_number}\">%{formatted_landline_number}</a>\n","booking_disabled_no_phone":"Vous ne pouvez pas prendre rendez-vous en ligne avec ce praticien.","booking_temporary_disabled_html":"Pour prendre rendez-vous, appelez le\n<a href=\"tel://%{landline_number}\">%{formatted_landline_number}</a>.\n"},"smart_app_banner":{"android":{"description":"Gratuit sur le Play Store"},"ios":{"description":"Gratuit sur l'App Store"},"install":"Installer"},"two_factor_auth":{"send_code":{"progress":"Envoi en cours...","success":"Nous vous avons envoyé un nouveau code de confirmation.","error":"L'envoi de votre code de confirmation a échoué. Veuillez réessayer de vous connecter ultérieurement.\n"}},"insurance_sector":{"private_long":"Assurance privée","private_short":"Assurance privée","public_long":"Assurance publique","public_stort":"Assurance publique"},"mobile":{"availabilities":{"subtitle":"Choisissez la date de consultation","see_more_availabilities":"Afficher plus de disponibilités","not_opened":"Les dates suivantes ne sont pas encore ouvertes à la réservation.","error":{"booking_disabled":"Désolé ce professionnel de santé n'est pas réservable en ligne.","no_availabilities":"Désolé il n'y a plus aucune disponibilité en ligne.","custom_error_patient":"Désolé, la réservation est impossible.","custom_error_doctor":"Désolé"},"see_more":"Voir plus","substitution_with":"Consultations assurées par un %{status} : %{name}\n","substitution":"Consultations assurées par un collaborateur","unavailable_slot_error":"Nous sommes désolés, cette plage horaire vient d'être réservée par un autre patient.\n","unknown_error":"Nous sommes désolés, une erreur est survenue lors de la réservation de votre rendez-vous.\n","choose_another_slot":"Choisir une autre plage horaire"}}},"profiles":{"warning_booking_modal":{"must_read":"Attention, à lire avant de prendre un RDV"},"legal_status":{"professional":"Libéral","employee_not_in_hospital":"Salarié (hors hôpital)","employee_in_hospital":"Salarié (en hôpital)"},"legal_form":["Affaire personnelle profession libérale","Société d'exercice libéral à responsabilité limitée (SELARL)","Société civile de moyens (SCM)","Société Civile Professionnelle (SCP)","SA à conseil d'administration","Société à responsabilité limitée (SARL)","Affaire personnelle commerçant","Société par actions simplifiée (SAS)","Association régie par la loi du 1er juillet 1901 et le décret du 16 août 1901","Société d'exercice libéral par action simplifiée (SELAS)","Société en nom collectif","Société par actions simplifiée à associé unique","Fondation","Association déclarée, reconnue d'utilité publique"],"index":{"title_1_day_filter":"Réserver en ligne un RDV pour aujourd'hui","title_3_days_filter":"Réserver en ligne un RDV dans les trois prochains jours","regulation_sectors":{"label":"Honoraires","without_extra":"Sans dépassements d'honoraires","with_extra":"Dépassements d'honoraires modérés"},"availabilities_filter":{"label":"Disponibilités","today":"Aujourd'hui","3days":"Dans les trois prochains jours"},"ref_visit_motives_filter":{"visit_motive":"Motif de consultation"},"meta-description":"Trouvez rapidement un %{speciality} %{location} et prenez rendez-vous gratuitement en ligne en quelques clics","meta-description-skill":"Trouvez rapidement un spécialiste en %{skill} %{location} et prenez rendez-vous gratuitement en ligne en quelques clics","practitioner":"praticien","near-you":"près de chez vous","professional":"professionnel de santé","no_doctors_for_motive":"Aucun %{speciality} ne pratique ce motif dans cette zone.","no-doctors":{"headline":"Aucun %{professional} ne peut être réservé sur Internet dans cette zone pour le moment.","talk":"Parlez de Befab à votre %{professional} pour que vous puissiez prendre rendez-vous directement en ligne la prochaine fois.","booking":"Vous trouverez ci-dessous l'annuaire des %{speciality} de cette zone que vous pouvez contacter par téléphone."},"previous_page":"Page précédente","next_page":"Page suivante"},"big_organization":{"title":"%{organization_name} en %{country_name}","other_specialities":"Autres spécialités"},"search_filters":{"title":"FILTRER PAR"},"b2b_banner_cta":{"not_in_search":"Vous êtes praticien et vous n'apparaissez pas dans cette recherche ?","contact_us":"Contactez-nous pour obtenir gratuitement le référencement de votre cabinet.","add_office":"Ajouter votre cabinet"},"practices_modal":{"title":"%{name} consulte dans %{count} lieux de consultation","speciality":{"one":"Spécialité :","other":"Spécialités :"},"choose_practice":"Choisir ce lieu","no_preference":"Je n'ai pas de préférence"},"agendas":{"title":"Prenez un rendez-vous directement en ligne","title_partners":"Prenez rendez-vous avec %{name}","choose_insurance_sector":"Type d'assurance","insurance_sector":{"private":"Assurance privée","public":"Assurance publique"},"change_practice":"Changer de lieu","choose_practice":"Choisir un lieu","choose_speciality":{"title":"Choisissez une spécialité","tooltip":"Merci de choisir une spécialité.","agenda":"Veuillez choisir une spécialité pour voir les horaires disponibles."},"practice":"Lieu de consultation"},"show":{"location":"Accès","profile":"Profil","opening_hours":"Horaires","pricing":"Tarifs","fees_separator":" à ","transit_title":"Moyens de transport","profile_practice_detail_title":"Tarifs et remboursements","skills_title":"Expertises actes et symptômes","access_informations":"Informations pratiques","parking_title":"Parking","informations":"Informations","accepted_patients":"Public reçu","open_website":"Voir le site","open_fees":"Voir les tarifs","website":"Site web","alt_profile_cover":"%{name}, %{first_parameter} à %{city}","book_online_appointment":"Prenez rendez-vous en ligne","book_online_appointment_short":"Prenez RDV en ligne","meta_description":"Prenez RDV en ligne avec %{name}: %{organization}%{regulation_sector}. Adresse : %{address}.\n","see_more":"▾ Voir plus","hide":"Cacher","organization-many-practices":"%{practice_count} lieux de consultation\n","doctor-many-practices":"ce praticien consulte dans %{practice_count} lieux","practice":"Lieu %{number}","practice_map_link":"Voir la carte et les informations d'accès","fees_title":"Tarif de la consultation","more_fees_link":"Voir plus de tarifs »","payment_means_title":"Moyens de paiement acceptés","other_informations":"Autres informations","unavailable_booking_title":"La prise de rendez-vous en ligne est temporairement indisponible.","unavailable_booking_warning":"Elle sera rapidement de nouveau disponible, merci de bien vouloir patienter et réessayer dans quelques minutes.","unavailable_booking_phone_number":"Vous pouvez également prendre RDV par téléphone au","practice_access_title":"Informations d’accès","team_title":"L'équipe","additional_infos":{"expertises":"Expertises","formations":"Formations","languages":"Langues parlées","associations":"Associations","decorations":"Prix et distinctions","office_periods":"Exercices en cabinet","hospital_periods":"Parcours hospitalier","clinic_periods":"Exercices en clinique","publications":"Travaux et publications"},"legal_link":"Informations légales ▾","fees_aphp_title":"Tarifs de l'AP-HP","fees_details_title":"Détail des honoraires","fees_details_subtitle":"Actes et soins les plus fréquents chez ce praticien","fees_warning":"Ces honoraires vous sont communiqués à titre indicatif par le praticien. Ils peuvent évoluer selon le type de soins finalement réalisés en cabinet, le nombre de consultations et les actes additionnels nécessaires. Toute intervention constituée d'actes avec dépassements d'honoraires fera l'objet d'un devis personnalisé du praticien.\n","aphp_fees":"Tarifs de l'AP-HP"},"doctors_results":{"practitioner":"praticien","practitioners":"Coiffeurs","appointment_button":"Prendre rendez-vous","more_info":"Plus d'information sur sa page","specialities":"Spécialités","title":{"results_no_location_skill":"%{speciality} : trouvez le bon spécialiste","results_no_location":"Trouvez un %{speciality} et réservez en ligne","results_at_location":"Réserver en ligne un RDV avec un %{speciality} %{location_with_pronoun}","results_at_location_skill":"%{speciality} %{location_with_pronoun} : réservez en ligne le bon spécialiste","results_nearby_location":"Réserver en ligne un RDV avec un %{speciality} dans les environs de %{location}","results_nearby_location_skill":"%{speciality} : réserver en ligne avec le bon spécialiste dans les environs de %{location}","other_results_nearby_location":"D'autres %{speciality} sont réservables en ligne dans les environs de %{location}","other_results_nearby_location_skill":"%{speciality} : D'autres spécialistes sont réservables en ligne dans les environs de %{location}\n"}},"directory_doctors_results":{"title_no_location":"D'autres %{speciality} consultent près de chez vous","title":"D'autres %{speciality} consultent %{location_with_pronoun}","insurance_card":{"accepted":"Carte vitale acceptée","rejected":"Carte vitale non acceptée"},"see_card":"Voir la fiche","practitioners":"Coiffeurs"},"directory_doctor_show":{"nearby_title":"Ganz in der Nähe: %{speciality} mit komfortabler Online-Terminbuchung in Berlin","title":"%{name} | %{speciality} à %{city}","phone_number":"Numéro de téléphone : ","opening_hours":"Horaires d’ouverture : ","website":"Site web : ","address":"Adresse du cabinet : ","emergency":"En cas d'urgence, appelez le 15","b2b_section_title":"%{doctor_name} ? Découvrez la prise de rendez-vous en ligne !","b2b_section_description":"Gagnez 30% en temps de secrétariat, réduisez de 75% vos rendez-vous non honorés, renouvelez votre patientèle selon vos besoins et apportez un service nouveau pour vos patients."},"search_result":{"choose_practitioner":"Merci de sélectionner votre praticien.","choose_motive_category":"Merci de sélectionner une catégorie de motif.","choose_motive":"Merci de sélectionner un motif de consultation."},"no_filtered_results":{"title":"Désolé, nous n'avons trouvé aucun professionnel de santé correspondant à vos critères.."},"no_results":{"title":"Désolé, nous n'avons trouvé aucun professionnel pour votre recherche…","try":"Essayez cette recherche :","try_other":"Essayez avec d'autres critères de recherche."},"empty":"Nous n'avons trouvé aucun résultat pour votre recherche","booking":{"show_more":"Afficher plus de résultats","availabilities":{"see_more":"Voir plus","substitution_with":"Consultations assurées par un %{status} : %{name}\n","substitution":"Consultations assurées par un collaborateur","unavailable_slot_error":"Nous sommes désolés, cette plage horaire vient d'être réservée par un autre patient.\n","unknown_error":"Nous sommes désolés, une erreur est survenue lors de la réservation de votre rendez-vous.\n","choose_another_slot":"Choisir une autre plage horaire","existing_temporary_appointment":"Vous avez une réservation en cours pour le %{date}. Que souhaitez-vous faire ?\n","confirm_appointment":"Confirmer ce rendez-vous","cancel_appointment":"Annuler ce rendez-vous","no_availability_this_week":"Pas de disponibilité cette semaine","next_availability":"Prochain RDV le %{date}\n"},"motive_rule":{"subtitle":"Attention, à lire avant de prendre un rendez-vous","checkbox_label":"J’ai lu et j’accepte les consignes ci-dessus.","checkbox_error":"Merci de cocher pour continuer"},"book_it":"Prendre rendez-vous","what_is_the_motive":"Quel est le motif de votre consultation ?","choose_motive":"Choisissez le motif de votre consultation","select_new_slot":"Veuillez sélectionner un nouveau créneau pour votre rendez-vous"}},"frontend":{"patient":{"agenda":{"confirm_appointment":"Confirmer ce RDV","booking_warning":{"continue":"Continuer ma réservation","cancel":"Annuler"},"default_practitioner":"Pas de préférence","emergency":"En cas d'urgence, appelez le 15","finish_appointment":"Vous devez finir le processus de réservation pour que votre RDV soit effectif.","more":"Voir plus","next_appointment":"Vous avez une réservation en cours pour le","next_availability":"Prochain RDV le","not_opened_availability":"Ces dates ne sont pas encore ouvertes à la réservation.","not_bookable":"Ce motif de consultation ne peut être réservé en ligne.","no_availabilities":"Aucune disponibilité en ligne.","doesnt_do_this_visit_motive":"Ce praticien ne pratique pas ce motif.","service_unavailable":"Service indisponible. Veuillez réessayer ultérieurement.","contat_me":"Appelez au %{phone_number} pour réserver.","other_practitioner":"Les consultations aux horaires marqués par un * seront assurées par son collaborateur","pick_another_time":"Choisir un autre horaire","pick_practitioner":"Choisissez votre praticien","pick_time":"Choisissez une date et une heure de rendez-vous sur le calendrier","practitioner":"Cette consultation sera honorée par","reasons":"Choisissez votre motif de consultation","reason":"Motif de consultation","motive_categories":"Choisissez votre catégorie de motif","motive_category":"Catégorie de motif","seeking_next_availabilities":"Récupération des prochaines disponibilités.","unconfirmed":"Attention, votre RDV n'est pas encore confirmé !"}}},"generic":{"error":"Désolé, une erreur est survenue."},"searchbar_speciality_kind":{"medical":"Médical","paramedical":"Paramédical","unofficial":"Médecine non reconnue","official":"Profession réglementée","subspeciality":"Expertise","symptom":"Symptôme","procedure":"Acte","other":"Autre"},"booking_selection":"Choisissez votre lieu de consultation","directory_modifications":{"header_description":"Vous pouvez mettre à jour les informations de la fiche de ce praticien.","alert_info":"Vous modifiez les informations du %{name} et de son cabinet.","alert_info_no_title":"Vous modifiez les informations de %{name} et de son cabinet.","is_doctor":"Êtes-vous le %{name} ?","is_doctor_no_title":"Êtes-vous %{name} ?","doctor_last_name":"Nom du praticien","doctor_first_name":"Prénom du praticien","practice_location":"Adresse du cabinet","practice_phone_number":"Numéro de téléphone du cabinet","practice_website":"Site web du cabinet","speciality":"Spécialité","regulation_sector":"Honoraires","insurance_card_accepted":"Carte vitale acceptée","opening_hours":"Horaires d'ouverture du cabinet","asks_for_deletion":"Je souhaite supprimer ma fiche","i_stopped_working":"J'ai cessé d'exercer","leave_me_alone":"Je ne veux pas être référencé","contributor":{"title":"Vos informations","email":"Votre adresse mail","notes":"Vos remarques pour l’équipe Befab"},"confirm":{"header_title":"Merci pour votre aide !","header_description":"Nous mettrons à jour cette fiche une fois vos modifications vérifiées par un modérateur de Befab","doctor":{"advertise_html":"Vous êtes praticien ? <br /> Avec Befab changez votre quotidien et celui de vos patients.","phone_number_label":"Laissez nous votre numéro de téléphone, nous vous rappelons et nous répondons à toutes vos questions.","phone_number_placeholder":"Votre numéro de téléphone","phone_number_action":"En savoir plus","phone_number_done":"Nous vous rappellerons d'ici 48h pour vous proposer une démonstration et répondre à toutes vos questions.\n"},"patient":{"advertise_html":"Avec Befab vous pouvez prendre rendez-vous en ligne, <br /> c’est immédiat, simple et gratuit","feature_find":"Trouvez votre praticien","feature_choose":"Choisissez une date et une heure de rendez-vous","feature_confirm":"Votre rendez-vous est confirmé","discover":"Découvrir Befab"}}},"appointment_proposals":{"show":{"title":"Un créneau s'est libéré","description_html":"Un créneau s'est libéré le <strong>%{date}</strong>. Vous pouvez prendre ce créneau si vous souhaitez avancer votre RDV à cette date ou vous pouvez conserver la date initiale.\n","new_title":"Nouveau rendez-vous proposé","initial_title":"Votre rendez-vous initial","new_button":"Prendre ce créneau","initial_button":"Conserver ce créneau","reject_dialog_html":"Vous ne souhaitez pas avancer votre rendez-vous. Votre rendez-vous sera donc maintenu au <strong>%{date}</strong>.\n","accept_dialog_html":"Vous allez avancer votre rendez-vous du <strong>%{appointment_date}</strong> avec le %{doctor} au <strong>%{proposal_date}</strong>.\n","expired":{"title":"Désolé, ce rendez-vous n’est plus disponible","message_html":"Le rendez-vous du %{canceled_appointment_date} a déjà été confirmé par un autre patient, nous en sommes désolés.\n<br />\n<strong>Cependant votre rendez-vous du %{current_appointment_date} est conservé.</strong>\n","link":"Voir les détails de mon rendez-vous"}}},"appointments":{"cancelation":{"confirmation_accept":"Confirmer l'annulation\n","cancel_action":"Annuler le rendez-vous","confirmation":"Souhaitez-vous annuler votre rendez-vous du %{date} avec le %{name} ?","too_late_message_html":"<strong>Vous ne pouvez pas annuler ce rendez-vous.</strong>\n<br />\nPour une annulation de dernière minute, les Coiffeurs préfèrent être prévenus par téléphone. C'est pourquoi il n'est pas possible d'annuler un rendez-vous moins de 4 heures avant via Befab.\n<br />\nVous devez contacter directement le %{name} au <strong>%{phone}</strong>.\n"},"details":{"booking_fields_label":"Informations complémentaires à destination du praticien","no_availabilities":"Aucune disponibilité ne vous convient ?","submit":"Prendre rendez-vous","confirm_cancel_appointment":"Souhaitez-vous annuler ce rendez-vous ?"},"blocked":{"title":"Nous sommes désolés, %{message}.","call_practitioner_html":"Vous pouvez contacter ce praticien au %{phone_number}.","other_available_practitioners_html":{"zero":"Renouvelez votre recherche pour trouver un autre %{speciality_label}.","one":"<b>Un autre %{speciality_label} à %{city}</b> peut vous recevoir.","other":"<b>%{count} autres %{speciality_label} à %{city}</b> peuvent vous recevoir."},"see_other_practitioners":"Prendre un rendez-vous"}},"appointments_move":{"title":"Déplacez votre rendez-vous","subtitle":"Choisissez un nouveau créneau pour votre consultation","abort_html":"Vous n'avez pas trouvé de disponibilité, nous en sommes désolés. <br />\nSouhaitez-vous annuler votre rendez-vous ou le conserver ?\n","move_success":"Votre rendez-vous a bien été déplacé.","cancel_success":"Votre rendez-vous a bien été conservé."},"account":{"appointments":{"with_substitute":"Collaborateur du %{name}","with_substitute_no_title":"Collaborateur de %{name}","details":{"alert":{"enable_label":"Activer l'alerte","title_without_alert":"Vous souhaitez prendre rendez-vous plus tôt ?","title_without_alert_state":"L'alerte est désactivée","title_with_alert":"L’alerte est activée","body_without_alert":"Activez une alerte et nous vous préviendrons si une disponibilité plus proche se libère.","body_with_alert":"Nous vous préviendrons si une disponibilité plus proche se libère.","dialog_title":"Votre alerte est activée","dialog_body_html":"Nous vous préviendrons par email si un rendez-vous se libère avant le <strong>%{date}</strong>.\n<p>\nVous pouvez désactiver cette alerte\ndans votre espace « Mes rendez-vous ».\n</p>\n"}}}},"searchbar":{"place_placeholder":"Où ?","query_placeholder":"Médecin, établissement, spécialité…","aroundme":"Autour de moi"}}};</script><div class="hidden" id="cookieConsent"><a class="close">&times;</a><h4>UTILISATION DES COOKIES</h4><p>En poursuivant votre navigation sans modifier vos paramètres, vous acceptez l'utilisation des cookies susceptibles de réaliser des statistiques de visite. Pour plus d’informations, <a rel="nofollow" href="cookies.html">cliquez ici</a>. </p></div><script src="assets/bundle-polyfill-ca935a24152a2e746ad917dfbd6c6eb8d81918fc5bd96c81e023d0c89913fe3a.js"></script><script src="assets/bundle-patient-fr-8d0d8872c1f9eaa9377c9c03d14a2cb499462b6b6edd9ab02e770ec9116c5bd3.js"></script><script src="webpack/patient-desktop-82df0eac893858f2b383.js"></script><!--[if lt IE 8]><script src="/assets/iealert-ef4c18d4ba1a68219a1ba859accd722d0a17e7cbc622b8ada259174bfe31a96e.js"></script><![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45065741-1', 'auto');
+
+
+    ga('set', 'anonymizeIp', true);
+    ga('set', "contentGroup1", 'Homepage');
+    ga('set', "contentGroup2", 'unknown');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+</script>
+<script>window.CE_SNAPSHOT_NAME = "homepage";
+setTimeout(function() {
+  (function(s,o,g){
+    var a=s.createElement(o);
+    var b=s.getElementsByTagName(o)[0];
+    a.src=g+Math.floor(new Date().getTime()/36e5);
+    a.defer=1;
+    b.parentNode.insertBefore(a,b)
+  })(document,'script','../script.crazyegg.com/pages/scripts/0030/8101d41d.js?')
+}, 100);</script></body>
+
+</html>

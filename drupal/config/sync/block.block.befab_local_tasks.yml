@@ -1,0 +1,22 @@
+uuid: 6dbc84f6-5866-46a9-b0c4-caf00f0b8267
+langcode: en
+status: false
+dependencies:
+  theme:
+    - befab
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: befab_local_tasks
+theme: befab
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

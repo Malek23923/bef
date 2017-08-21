@@ -1,0 +1,19 @@
+uuid: 5f295248-c600-42b3-937c-bd7402a266ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.appointment
+    - field.storage.establishment.field_customer
+id: establishment.appointment.field_customer
+field_name: field_customer
+entity_type: establishment
+bundle: appointment
+label: Customer
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,22 @@
+add establishment entities:
+  title: 'Create new Establishment entities'
+
+administer establishment entities:
+  title: 'Administer Establishment entities'
+  description: 'Allow to access the administration form to configure Establishment entities.'
+  restrict access: true
+
+delete establishment entities:
+  title: 'Delete Establishment entities'
+
+edit establishment entities:
+  title: 'Edit Establishment entities'
+
+access establishment overview:
+  title: 'Access the Establishment overview page'
+
+view published establishment entities:
+  title: 'View published Establishment entities'
+
+view unpublished establishment entities:
+  title: 'View unpublished Establishment entities'

@@ -1,0 +1,46 @@
+uuid: 9435cd1e-3960-4f74-b964-679cbb43b4eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.service
+    - field.field.establishment.service.field_description
+    - field.field.establishment.service.field_location
+  module:
+    - field_location
+    - user
+id: establishment.service.default
+targetEntityType: establishment
+bundle: service
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_location:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: location_formatter_standard
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

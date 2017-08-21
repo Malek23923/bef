@@ -1,0 +1,6 @@
+name: 'befab _base'
+dependencies: {  }
+description: 'befab _base'
+core: 8.x
+package: Custom
+type: module

@@ -1,0 +1,24 @@
+uuid: e6453af9-56ea-4a2d-8c65-32ad2396674e
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.service
+    - field.storage.establishment.field_location
+  module:
+    - field_location
+id: establishment.service.field_location
+field_name: field_location
+entity_type: establishment
+bundle: service
+label: Location
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    locality: ''
+    coordinates: '[]'
+default_value_callback: ''
+settings: {  }
+field_type: location

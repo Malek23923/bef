@@ -1,0 +1,19 @@
+uuid: c60538cc-75b1-498d-9ba1-b93ed0637a37
+langcode: en
+status: true
+dependencies:
+  module:
+    - base
+id: establishment.field_description
+field_name: field_description
+entity_type: establishment
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

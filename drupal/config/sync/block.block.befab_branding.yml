@@ -1,0 +1,25 @@
+uuid: 87b7417b-5ce4-482f-aa16-9f8b4473091e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - befab
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: befab_branding
+theme: befab
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

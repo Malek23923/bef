@@ -1,0 +1,29 @@
+uuid: ff20b10b-015d-430b-9a93-b5d67d317670
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.appointment
+    - base.establishment_type.service
+    - field.storage.establishment.field_establishment
+id: establishment.appointment.field_establishment
+field_name: field_establishment
+entity_type: establishment
+bundle: appointment
+label: Establishment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:establishment'
+  handler_settings:
+    target_bundles:
+      service: service
+    sort:
+      field: id
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

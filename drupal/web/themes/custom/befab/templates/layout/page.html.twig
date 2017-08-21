@@ -1,0 +1,269 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.navigation: Items for the Navigation region.
+ * - page.page_title: Used by Current page Title.
+ * - page.banner: Items for the banner region.
+ * - page.highlighted: Items for the highlighted top  region.
+ * - page.content_top: The main content top of the current page.
+ * - page.help: Item for the help region.
+ * - page.breadcrumb: Item for the Breadcrumb region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.content_bottom: Items for the bottom in content region.
+ * - page.footer_top: Items for the footer top region.
+ * - page.footer_first: Items for the footer first region.
+ * - page.footer_second: Items for the footer Second region.
+ * - page.footer_third: Items for the footer third region.
+ * - page.footer_bottom: Items for the footer bottom region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+<!-- Header and Navbar -->
+<div class="navbar-new">
+    <a class="logo" href="index.html"></a>
+    <div class="button-menu mobile">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="mobile-overlay-menu"></div>
+    <div class="navbar-new-right">
+        <div class="b2b-cta">
+            <a class="b2b-cta-btn" href="#">Vous êtes un Coiffeur ?</a>
+        </div>
+        <a class="help" href="#"> <span class="icon">?</span> <span class="text">Besoin d&#39;aide ?</span></a>
+        <a class="account login-form-toggle"><span class="icon front-icon-user"></span> <span class="name"><strong>Mon compte</strong>
+                <br />
+                Gérer mes RDV</span></a>
+    </div>
+    <div class="mobile-nav-right">
+        <div class="button-search front-icon-search" id="bt-search"></div><a class="a mobile button-account front-icon-user" href="#"></a>
+    </div>
+    <div class="mobile-menu left dl-menu-dark">
+        <div class="dl-menu-section">
+            <ul class="dl-menu-group dl-menu-group-dividers">
+                <li class="dl-menu-item">
+                    <a target="_blank" href="#">Vous êtes Coiffeur  ?</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Le concept</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">À propos de nous</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Nos Investisseurs</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Recrutement</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="sponsorship/new.html">Parrainage</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Confidentialité</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Presse</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Besoin d&#39;aide ?</a>
+                </li>
+                <li class="dl-menu-item">
+                    <a href="#">Questions fréquentes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="login-form-popin" style="display: none">
+    <div class="arrow-popin-new"></div><strong class="title">Bienvenue à nouveau sur Befab.</strong><strong class="subtitle">Merci de vous identifier.</strong>
+    <form class="login-form" action="https://www.Befab.fr/login" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="kind" id="kind" value="patient" />
+        <input type="hidden" name="return_to" id="return_to" />
+        <div class="form-block block-padding block-sign-in">
+            <div class="form-group">
+                <input autocomplete="email" class="form-control" name="username" placeholder="Adresse email" required="" type="email" />
+            </div>
+            <div class="form-group">
+                <input autocomplete="current-password" class="form-control" name="password" placeholder="Mot de passe" required="" type="password" />
+                <a class="forgotten-password-link" rel="nofollow" target="_blank" href="#">Mot de passe oublié ?</a>
+            </div>
+            <div class="form-group txt-left txt-small">
+                <label class="form-label checkbox-inline">
+                    <input checked="checked" name="remember" type="checkbox" />
+                    Se souvenir de moi sur cet appareil</label>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="redirection" id="redirection" />
+                <input type="submit" name="commit" value="S&#39;identifier" class="dl-button-block dl-button-info dl-button" data-disable-with="Identification…" />
+            </div>
+        </div>
+    </form><strong>
+        <hr />
+        <span>Vous êtes un Coiffeur  ?</span> <a href="#">Identifiez-vous</a></strong>
+</div>
+<link rel="stylesheet" media="all" href="{{ base_path ~ directory }}/assets/patient/bundle-website-homepage-b93823fba7e6bac767f609392efdee34e970a896499a233354f120a2108340d8.css" />
+<div class="home-fr">
+    <section class="cover-wrapper homepage-search">
+        <div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div>
+        <div class="search-zone row-center">
+            <h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4>
+            <!-- need to add preprocess to inject the form in every page -->
+            {{form}}
+        </div>
+    </section>
+</div>
+<!--End Header & Navbar -->
+
+
+
+
+
+
+
+
+
+
+<!-- layout -->
+<div id="wrapper">
+
+    {{ page.content }}
+
+</div>
+<!-- End layout -->
+
+
+
+
+
+
+
+
+
+
+<!-- start: Footer -->
+<footer>
+
+    <div class="row-center row-padding">
+        <div class="container-links">
+            <div class="col-3">
+                <h4>À propos de Befab</h4>
+                <ul>
+                    <li>
+                        <a target="_blank" href="#">Vous êtes Coiffeur  ?</a>
+                    </li>
+                    <li>
+                        <a href="#">Le concept</a>
+                    </li>
+                    <li>
+                        <a href="#">À propos de nous</a>
+                    </li>
+                    <li>
+                        <a href="#">Nos Investisseurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Recrutement</a>
+                    </li>
+                    <li>
+                        <a href="#">Parrainage</a>
+                    </li>
+                    <li>
+                        <a href="#">Confidentialité</a>
+                    </li>
+                    <li>
+                        <a href="#">Presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Besoin d&#39;aide ?</a>
+                    </li>
+                    <li>
+                        <a href="#">Questions fréquentes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-5">
+                <h4>Trouvez votre salon de coiffure</h4>
+                <ul>
+                    <li>
+                        <a href="#">Toutes les spécialités</a>
+                    </li>
+                    <li>
+                        <a href="#">Toutes les expertises</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-3">
+                <h4>Recherches fréquentes</h4>
+                <ul>
+                    <li>
+                        <a href="#">Coiffeurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Coiffeurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Coiffeurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Coiffeurs</a>
+                    </li>
+                    <li>
+                        <a href="#">Coiffeurs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br />
+
+        <div class="social-network-links">
+            <a class="front-icon-facebook" title="Suivez-nous sur Facebook" data-external="true" href="https://www.facebook.com/Befab"><span></span></a><a class="front-icon-twitter" title="Suivez-nous sur Twitter" data-external="true" href="https://twitter.com/Befab"><span></span></a><a class="front-icon-linkedin" title="Suivez-nous sur LinkedIn" data-external="true" href="https://www.linkedin.com/company/Befab"><span></span></a><a class="front-icon-gplus" title="Suivez-nous sur Google Plus" data-external="true" href="#"><span></span></a>
+        </div>
+
+    </div>
+</footer>
+
+<!-- End Footer Menu -->
+
+

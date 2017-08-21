@@ -1,0 +1,18 @@
+# Establishment routing definition
+
+entity.establishment.canonical:
+  route_name: entity.establishment.canonical
+  base_route: entity.establishment.canonical
+  title: 'View'
+
+entity.establishment.edit_form:
+  route_name: entity.establishment.edit_form
+  base_route: entity.establishment.canonical
+  title: 'Edit'
+
+entity.establishment.delete_form:
+  route_name:  entity.establishment.delete_form
+  base_route:  entity.establishment.canonical
+  title: Delete
+  weight: 10
+

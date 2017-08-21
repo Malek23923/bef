@@ -1,0 +1,11 @@
+
+base.search_form:
+  path: '/base/form/search'
+  defaults:
+    _form: '\Drupal\base\Form\SearchForm'
+    _title: 'SearchForm'
+  requirements:
+    _access: 'TRUE'
+ 
+    
+

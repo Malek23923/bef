@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains befab_behaviour.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormBase;
+/**
+ * Implements hook_help().
+ */
+function befab_behaviour_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the befab_behaviour module.
+    case 'help.page.befab_behaviour':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('befab behaviours') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function befab_behaviour_theme() {
+   return [
+    'befab_behaviour' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+

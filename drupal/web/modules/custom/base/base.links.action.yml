@@ -1,0 +1,11 @@
+entity.establishment.add_form:
+  route_name: entity.establishment.add_page
+  title: 'Add Establishment'
+  appears_on:
+    - entity.establishment.collection
+entity.establishment_type.add_form:
+  route_name: entity.establishment_type.add_form
+  title: 'Add Establishment type'
+  appears_on:
+    - entity.establishment_type.collection
+

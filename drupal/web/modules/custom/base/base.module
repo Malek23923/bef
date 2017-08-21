@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Contains base.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function base_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name)
+    {
+        // Main module help for the base module.
+        case 'help.page.base' :
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('base module[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[3~[3~[D[D[D[D[D[D[D custom module') . '</p>';
+            return $output;
+
+        default :
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function base_theme() {
+    $theme = [];
+    $theme['establishment'] = [
+    'render element' => 'elements',
+    'file' => 'establishment.page.inc',
+    'template' => 'establishment', ];
+    $theme['establishment_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'establishment.page.inc', ];
+
+    $theme['base'] = ['render element' => 'children', ];
+    $theme['search_form'] = ['render element' => 'form', ];
+
+    $theme['search_results'] = [
+    'render element' => 'content',
+    'variables' => ['entities' => NULL]];
+    
+    return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function base_theme_suggestions_establishment(array $variables) {
+    $suggestions = [];
+    $entity = $variables['elements']['#establishment'];
+    $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+    $suggestions[] = 'establishment__' . $sanitized_view_mode;
+    $suggestions[] = 'establishment__' . $entity -> bundle();
+    $suggestions[] = 'establishment__' . $entity -> bundle() . '__' . $sanitized_view_mode;
+    $suggestions[] = 'establishment__' . $entity -> id();
+    $suggestions[] = 'establishment__' . $entity -> id() . '__' . $sanitized_view_mode;
+    return $suggestions;
+}

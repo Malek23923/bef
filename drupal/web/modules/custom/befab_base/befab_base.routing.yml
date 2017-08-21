@@ -1,0 +1,27 @@
+befab_base.start:
+    path: /home
+    defaults:
+        _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::startAction'
+    requirements:
+        _permission: 'access content'
+        
+location.autocomplete:
+  path: '/location/autocomplete'
+  defaults:
+    _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::LocationAutocomplete'
+  requirements:
+    _permission: 'access content'
+
+establishment.autocomplete:
+  path: '/establishment/autocomplete'
+  defaults:
+    _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::EstablishmentAutocomplete'
+  requirements:
+    _permission: 'access content'
+    
+search.results:
+  path: '/search/results/{service}/{location}/{time}'
+  defaults:
+    _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::SearchresultAction'
+  requirements:
+    _permission: 'access content'

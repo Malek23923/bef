@@ -1,0 +1,20 @@
+uuid: a1474a05-da52-4e01-b32c-8cca090fd5a3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - befab
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: befab_local_actions
+theme: befab
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,18 @@
+
+# Establishment menu items definition
+entity.establishment.collection:
+  title: 'Establishment list'
+  route_name: entity.establishment.collection
+  description: 'List Establishment entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Establishment type menu items definition
+entity.establishment_type.collection:
+  title: 'Establishment type'
+  route_name: entity.establishment_type.collection
+  description: 'List Establishment type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

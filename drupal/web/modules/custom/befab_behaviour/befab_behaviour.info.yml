@@ -1,0 +1,5 @@
+name: befab_behaviour
+type: module
+description: befab behaviours
+core: 8.x
+package: Custom

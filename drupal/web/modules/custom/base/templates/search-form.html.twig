@@ -1,0 +1,78 @@
+{#
+/**
+* @file
+* Default theme implementation for a 'form' element.
+*
+* Available variables
+* - attributes: A list of HTML attributes for the wrapper element.
+* - children: The child elements of the form.
+*
+* @see template_preprocess_form()
+*
+* @ingroup themeable
+*/
+#}
+
+
+<form{{ attributes }}>
+    <div class="searchbar-query">
+        <div>
+            <div class="searchbar-input-wrapper">
+                <svg class="searchbar-input-icon" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.6 16.92c.48.6.53 1.12.14 1.58l-1.2 1.2c-.58.48-1.16.48-1.72 0l-4.8-4.86a7.6 7.6 0 0 1-3.96 1.1c-2.17 0-4.05-.82-5.64-2.44C.82 11.92 0 10.04 0 7.86c0-2.1.76-3.95 2.27-5.54C3.83.78 5.67 0 7.82 0 10 0 11.9.8 13.5 2.42c1.62 1.62 2.43 3.5 2.43 5.64 0 1.52-.4 2.9-1.2 4.1l4.86 4.76zM2.36 7.86c0 1.5.58 2.8 1.74 3.96 1.16 1.16 2.48 1.73 3.96 1.73s2.76-.54 3.8-1.63c1.1-1.05 1.64-2.34 1.64-3.86 0-1.45-.57-2.75-1.73-3.9C10.62 3 9.3 2.4 7.82 2.4c-1.52 0-2.8.55-3.8 1.64-1.1 1.02-1.65 2.3-1.65 3.8z"></path>
+                </svg>
+                {{form.establishment}}
+            </div>
+        </div>
+    </div>
+
+    <div class="searchbar-place-submit">
+        <div class="searchbar-place">
+            <div class="searchbar-place-input-wrapper">
+                <div class="searchbar-input-wrapper searchbar-input-hide-overflowing-around-me">
+                    <svg class="searchbar-input-icon" height="20" viewbox="0 0 16 20" width="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7.5c0-1-.2-2-.7-3-.3-.8-1-1.6-1.7-2.3C12.8 1.5 12 1 11 .6 10 .2 9 0 8 0S6 .2 5 .6c-1 .4-2 1-2.7 1.6C1.6 3 1 3.7.7 4.6c-.5 1-.7 2-.7 3 0 .8.2 1.8.7 2.8 0 .4.4 1 .8 1.4l5.2 7.5c.4.5.8.7 1.3.7s1-.2 1.3-.7l5.2-7.5c.4-.5.7-1 .8-1.4.5-1 .7-2 .7-3zm-6 2c-.5.5-1.2.8-2 .8s-1.5-.3-2-1c-.7-.4-1-1-1-1.8s.3-1.4 1-2c.5-.5 1.2-.8 2-.8s1.5.3 2 .8c.7.6 1 1.2 1 2 0 .7-.3 1.4-1 2z"></path>
+                    </svg>
+                    {{form.location}}
+                    <button class="Tappable-inactive searchbar-place-around-me-button dl-button dl-button-size-normal" role="button" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" type="button">
+                        <svg class="searchbar-place-around-me-icon" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8 19.5c-.15.33-.42.5-.8.5-.05 0-.12 0-.2-.03-.22-.05-.4-.16-.52-.32-.13-.17-.2-.35-.2-.56v-8.2H.92c-.2 0-.4-.08-.55-.2-.17-.13-.27-.3-.32-.5-.07-.2-.05-.4.05-.6.07-.2.2-.35.4-.44L18.68.1c.12-.07.26-.1.4-.1.26 0 .48.1.65.27.14.13.23.3.26.5 0 .18 0 .37-.1.55L10.8 19.5z"></path>
+                        </svg><span class="searchbar-place-around-me-label">Autour de moi</span><i class="icon-dm-delete-form searchbar-place-around-me-clear"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="searchbar-place">
+            <div class="searchbar-place-input-wrapper">
+                <div class="searchbar-input-wrapper searchbar-input-hide-overflowing-around-me">
+                    <!-- <svg class="searchbar-input-icon" height="20" viewbox="0 0 16 20" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7.5c0-1-.2-2-.7-3-.3-.8-1-1.6-1.7-2.3C12.8 1.5 12 1 11 .6 10 .2 9 0 8 0S6 .2 5 .6c-1 .4-2 1-2.7 1.6C1.6 3 1 3.7.7 4.6c-.5 1-.7 2-.7 3 0 .8.2 1.8.7 2.8 0 .4.4 1 .8 1.4l5.2 7.5c.4.5.8.7 1.3.7s1-.2 1.3-.7l5.2-7.5c.4-.5.7-1 .8-1.4.5-1 .7-2 .7-3zm-6 2c-.5.5-1.2.8-2 .8s-1.5-.3-2-1c-.7-.4-1-1-1-1.8s.3-1.4 1-2c.5-.5 1.2-.8 2-.8s1.5.3 2 .8c.7.6 1 1.2 1 2 0 .7-.3 1.4-1 2z"></path>
+                    </svg>-->
+                    {{form.time}}
+                    <button class="Tappable-inactive searchbar-place-around-me-button dl-button dl-button-size-normal" role="button" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" type="button">
+                        <svg class="searchbar-place-around-me-icon" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8 19.5c-.15.33-.42.5-.8.5-.05 0-.12 0-.2-.03-.22-.05-.4-.16-.52-.32-.13-.17-.2-.35-.2-.56v-8.2H.92c-.2 0-.4-.08-.55-.2-.17-.13-.27-.3-.32-.5-.07-.2-.05-.4.05-.6.07-.2.2-.35.4-.44L18.68.1c.12-.07.26-.1.4-.1.26 0 .48.1.65.27.14.13.23.3.26.5 0 .18 0 .37-.1.55L10.8 19.5z"></path>
+                        </svg><span class="searchbar-place-around-me-label">Autour de moi</span><i class="icon-dm-delete-form searchbar-place-around-me-clear"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="Tappable-inactive dl-button-primary searchbar-submit-button dl-button dl-button-size-normal" role="button" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; cursor: pointer;" type="submit">
+            <span class="dl-button-label"><span class="searchbar-submit-button-label">Rechercher</span>
+                <svg class="searchbar-submit-button-arrow" height="16" viewbox="0 0 10 16" width="10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.7.5c-.2-.3-.5-.5-1-.5S1 .2.5.5C-.2 1-.2 2 .5 2.7L5.7 8 .5 13.5c-.7.8-.7 1.5 0 2.2.3.3.7.4 1.2.4.4 0 .8 0 1-.3L9 9c.3-.2.4-.5.4-1 0-.4 0-.8-.4-1L2.7.5z"></path>
+                </svg></span>
+        </button>
+    </div>
+
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+</form>
+<style>
+    .form-item {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+</style>

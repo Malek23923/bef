@@ -1,0 +1,5 @@
+name: base
+type: module
+description: base custom module
+core: 8.x
+package: Custom

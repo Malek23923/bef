@@ -1,0 +1,24 @@
+uuid: c2c24d5f-5384-490f-afbf-15a8fa85a09a
+langcode: en
+status: true
+dependencies:
+  config:
+    - base.establishment_type.appointment
+    - field.storage.establishment.field_date
+  module:
+    - datetime
+id: establishment.appointment.field_date
+field_name: field_date
+entity_type: establishment
+bundle: appointment
+label: Date
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

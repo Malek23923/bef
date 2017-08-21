@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * befab_base.module
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function befab_base_menu() {
+  $items = array();
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function befab_base_form_alter() {
+
+}

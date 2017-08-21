@@ -1,0 +1,20 @@
+uuid: 6249a4e5-6a52-41ab-8017-796383ba3399
+langcode: en
+status: true
+dependencies:
+  module:
+    - base
+    - field_location
+id: establishment.field_location
+field_name: field_location
+entity_type: establishment
+type: location
+settings:
+  googlemaps_library: field_location
+module: field_location
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
