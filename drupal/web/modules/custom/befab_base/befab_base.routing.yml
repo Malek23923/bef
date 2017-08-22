@@ -25,3 +25,11 @@ search.results:
     _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::SearchresultAction'
   requirements:
     _permission: 'access content'
+ 
+single.service:
+  path: '/service/{uid}'
+  defaults:
+    _controller: '\Drupal\befab_base\Controller\Befab_baseStartController::EstablishmentAction'
+  requirements:
+    _permission: 'access content'
+    

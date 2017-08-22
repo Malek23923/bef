@@ -144,16 +144,21 @@
         <span>Vous êtes un Coiffeur  ?</span> <a href="#">Identifiez-vous</a></strong>
 </div>
 <link rel="stylesheet" media="all" href="{{ base_path ~ directory }}/assets/patient/bundle-website-homepage-b93823fba7e6bac767f609392efdee34e970a896499a233354f120a2108340d8.css" />
-<div class="home-fr">
-    <section class="cover-wrapper homepage-search">
-        <div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div>
-        <div class="search-zone row-center">
-            <h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4>
-            <!-- need to add preprocess to inject the form in every page -->
-            {{form}}
-        </div>
-    </section>
-</div>
+
+{% set current = url('<current>')['#markup'] %}
+{% if 'service' in current|render|render %}
+{% else %}
+    <div class="home-fr">
+        <section class="cover-wrapper homepage-search">
+            <div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div>
+            <div class="search-zone row-center">
+                <h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4>
+                <!-- need to add preprocess to inject the form in every page -->
+                {{form}}
+            </div>
+        </section>
+    </div>
+{% endif %}
 <!--End Header & Navbar -->
 
 

@@ -19,3 +19,18 @@ function befab_base_menu() {
 function befab_base_form_alter() {
 
 }
+
+
+function befab_base_theme(){
+    
+     return [
+    'maps' => [
+      'variables' => [
+        'description' => null,
+      ],
+      'template' => 'maps',
+      'render element' => 'children',
+    ],
+  ];
+     
+}

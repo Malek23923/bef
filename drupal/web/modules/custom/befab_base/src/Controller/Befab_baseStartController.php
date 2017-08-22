@@ -26,7 +26,8 @@ class Befab_baseStartController {
 
         return [
             '#theme' => 'my_template',
-            '#form' => $form];
+            '#form' => $form,
+        ];
     }
 
     /**
@@ -38,8 +39,6 @@ class Befab_baseStartController {
      */
     public function SearchresultAction($service, $location, $time) {
 
-
-
         $vars = [
             'establishment' => $service,
             'location ' => $location,
@@ -48,10 +47,26 @@ class Befab_baseStartController {
 
         $results = $this->getResults($vars);
 
+        $geo = array();
+        $titles = array();
+
+        foreach ($results as $id => $element) {
+            $coordinates = ($element->get('field_geofield')->value);
+            $index = $element->get('id')->value;
+            $geo[$index] = $coordinates;
+            $titles[$index] = $element->get('name')->value;
+        }
 
         return [
             '#theme' => 'search_results',
-            '#entities' => $results];
+            '#entities' => $results,
+            '#attached' => array(
+                'drupalSettings' => array(
+                    // Return the first Geofield value
+                    'geofield' => $geo,
+                    'title' => $titles
+                ),
+            ),];
     }
 
     /**
@@ -76,7 +91,7 @@ class Befab_baseStartController {
             $description = $entity->get('field_description')->value;
 
             if (stripos($description, $values['establishment']) !== false || stripos($name, $values['establishment']) !== false) {
-                $locality = $entity->get('field_location')->locality;
+                $locality = $entity->get('field_address')->locality;
                 // checks if the location exists
                 if (stripos($locality, $values['location']) !== false) {
                     $results[] = $entity;
@@ -112,7 +127,7 @@ class Befab_baseStartController {
         $establishments = \Drupal::entityTypeManager()->getStorage('establishment')->loadMultiple($entity_ids);
 
         foreach ($establishments as $id => $entity) {
-            $locality = $entity->get('field_location')->locality;
+            $locality = $entity->get('field_address')->getString();
 
             if (stripos($locality, $input) !== false) {
                 $results[] = [
@@ -157,6 +172,16 @@ class Befab_baseStartController {
         }
 
         return new JsonResponse($results);
+    }
+
+    public function EstablishmentAction($uid) {
+
+        $establishment = \Drupal::entityTypeManager()->getStorage('establishment')->load($uid);
+
+        return [
+            '#theme' => 'single_service',
+            '#entities' => $establishment,
+        ];
     }
 
 }

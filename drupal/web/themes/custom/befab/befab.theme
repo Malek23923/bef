@@ -39,9 +39,11 @@ function befab_page_attachments_alter(array &$page) {
  */
 function befab_preprocess_page(array &$variables) {
     // add the main form to the page 
+    
     $form_class = '\Drupal\base\Form\SearchForm';
     $form = \Drupal::formBuilder()->getForm($form_class);
     $variables['form'] = $form ;
+    
 
 }
 

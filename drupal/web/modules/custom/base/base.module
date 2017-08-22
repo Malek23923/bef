@@ -17,7 +17,7 @@ function base_help($route_name, RouteMatchInterface $route_match) {
         case 'help.page.base' :
             $output = '';
             $output .= '<h3>' . t('About') . '</h3>';
-            $output .= '<p>' . t('base module[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[C[C[C[C[C[C[3~[3~[D[D[D[D[D[D[D custom module') . '</p>';
+            $output .= '<p>' . t('base module custom module') . '</p>';
             return $output;
 
         default :
@@ -44,6 +44,11 @@ function base_theme() {
     $theme['search_results'] = [
     'render element' => 'content',
     'variables' => ['entities' => NULL]];
+    
+     $theme['single_service'] = [
+    'render element' => 'content',
+    'variables' => ['entities' => NULL]];
+   
     
     return $theme;
 }

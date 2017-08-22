@@ -57,7 +57,7 @@ class SearchForm extends FormBase {
      * Constructs a new SearchForm object.
      */
     public function __construct() {
-        
+
     }
 
     /**
@@ -73,14 +73,14 @@ class SearchForm extends FormBase {
     public function buildForm(array $form, FormStateInterface $form_state) {
 
         $form['#attributes'] = array('class' => 'searchbar ng-pristine ng-valid');
-        $fomr['#prefix'] = ' <section class="cover-wrapper homepage-search"><div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div>
-                <div class="search-zone row-center">
-                    <h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4>
-                    <div id="doctor_search_bar" data-props="{&quot;queryInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;speciality&quot;:null},&quot;placeInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;place_id&quot;:null}}">
-           ';
-        $form['#suffix'] = '</div>
-                </div>
-            </section>';
+    //    $form['#prefix'] = ' <section class="cover-wrapper homepage-search"><div class="cover-background country-fr year-2017 month-7 week-29 day-19"></div>
+        //        <div class="search-zone row-center">
+          //          <h1>Prenez un rendez-vous en ligne chez un Coiffeur ou un Esthéticien </h1><h4>C&#39;est immédiat, simple et gratuit.</h4>
+          //          <div id="doctor_search_bar" data-props="{&quot;queryInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;speciality&quot;:null},&quot;placeInputProps&quot;:{&quot;defaultValue&quot;:null,&quot;place_id&quot;:null}}">
+        //   ';
+  //      $form['#suffix'] = '</div>
+          //      </div>
+        //    </section>';
 
         $form['establishment'] = [
             '#type' => 'textfield',

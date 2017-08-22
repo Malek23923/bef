@@ -4,4 +4,11 @@ global-styling:
     theme:
       assets/css/styles.css : {}
    js:
-     assets : {}
+     assets/js/custom.js : {}
+     https://maps.googleapis.com/maps/api/js?key=AIzaSyC-fjDHSTuPQuI5LVhpr0UceXaZJgxzyok: { type: external, minified: true }
+   dependencies:
+    - core/jquery
+    - core/drupal
+    
+
+
